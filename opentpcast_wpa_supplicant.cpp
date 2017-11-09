@@ -48,7 +48,7 @@ int main() {
 	for(const auto &ssid : { "TPCast_AP1", "TPCast_AP2", "TPCast_AP3", "TPCast_AP4" }) networks.push_back({ ssid, "12345678", (priority == ssid ? 7 : 0) });
 
 	// Legacy factory network profile (PRE)
-	networks.push_back({ "TP_CastAP", "12345678", (priority == "TPCast_AP1" ? 5 : 3) });
+	networks.push_back({ "TPCast_AP", "12345678", (priority == "TPCast_AP1" ? 5 : 3) });
 
 	// MAC-unique network profile (CE)
 	std::ifstream wlan0address("/sys/class/net/wlan0/address");
